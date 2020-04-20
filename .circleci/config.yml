@@ -11,23 +11,10 @@ jobs:
           command: npm install
       - run:
           name: Build app
-          command: npm build
-  deploy:
-    docker:
-      - image: circleci/buildpack-deps:stretch
-    working_directory: ~/app
-    steps:
+          command: npm buil
       - run:
-          name: Build Docker image
-          command: docker build -t test-vue .
-
-workflows:
-  version: 2
-  commit:
-    jobs:
-      - build
-      - deploy
-
+          name: Build app
+          command: docker build -t ariv3ra
 
 
     
