@@ -1,11 +1,12 @@
 version: 2.1
 jobs:
   build:
+    docker:
+      - image: circleci/buildpack-deps:stretch
     steps:
       - checkout
       - run:
           name: Build app
-          command: docker build -t vue-test .
-
+          command: ocker build -t test-vue .
 
     
