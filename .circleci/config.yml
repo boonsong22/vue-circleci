@@ -19,7 +19,7 @@ jobs:
     steps:
       - run:
           name: Build Docker image
-          command: docker build --file .circleci/images -t test-vue .
+          command: docker build -t test-vue .
 
 workflows:
   version: 2
