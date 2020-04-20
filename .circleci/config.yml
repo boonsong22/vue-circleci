@@ -12,7 +12,7 @@ jobs:
       - run:
           name: Build app
           command: npm build
-  build:
+  deploy:
     docker:
       - image: circleci/buildpack-deps:stretch
     working_directory: ~/app
