@@ -9,5 +9,17 @@ jobs:
       - run:
           name: Install packages
           command: npm install
+      - run:
+          name: Build app
+          command: npm build
+  build:
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    working_directory: ~/app
+    steps:
+      - run:
+          name: Build Docker image
+          command: docker build --file .circleci/images -t test-vue .
+    
 
     
