@@ -7,14 +7,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install packages
-          command: npm install
-      - run:
           name: Build app
-          command: npm buil
-      - run:
-          name: Build app
-          command: docker build -t ariv3ra
+          command: docker build -t vue-test .
 
 
     
