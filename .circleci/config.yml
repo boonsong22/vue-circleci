@@ -7,6 +7,6 @@ jobs:
       - checkout
       - run:
           name: Build app
-          command: ocker build -t test-vue .
+          command: docker build -t test-vue .
 
     
