@@ -6,7 +6,7 @@ jobs:
     executor:
       name: node/default
     docker:
-          - image: circleci/buildpack-deps:stretch
+      - image: circleci/buildpack-deps:stretch
     steps:
       - checkout
       - node/with-cache:
